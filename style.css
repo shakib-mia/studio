@@ -1,0 +1,64 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;1,400;1,500&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Clash Display";
+  font-weight: 500;
+  src: url("/assets/fonts/ClashDisplay-Medium.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Clash Display";
+  font-weight: 600;
+  src: url("/assets/fonts/ClashDisplay-Semibold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Clash Display";
+  font-weight: 700;
+  src: url("/assets/fonts/ClashDisplay-Bold.woff") format("woff");
+}
+
+body {
+  /* font-family: "Clash Display", sans-serif; */
+  @apply bg-primary text-white !scroll-smooth;
+}
+
+p {
+  @apply font-roboto;
+}
+
+.page-container {
+  @apply px-5 xl:px-[8.125rem];
+}
+
+.container-fluid {
+  @apply px-7 xl:px-[5rem];
+}
+
+.button {
+  @apply px-3 py-2 xl:px-7 xl:py-[0.9375rem] bg-secondary hover:bg-secondary-dark transition-all rounded-full font-clash-display text-xs xl:text-base;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply font-clash-display;
+}
+
+#navbar {
+  @apply h-0 -z-30 xl:z-0 xl:flex xl:h-auto;
+}
+
+#nav-check:checked + #navbar {
+  @apply h-fit z-[999];
+}
+
+.service-card {
+  @apply px-14 py-[4.5rem] hover:bg-secondary cursor-pointer transition-[background-color] duration-300;
+}

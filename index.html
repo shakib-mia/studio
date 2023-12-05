@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Clash+Display&display=swap"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Vite App</title>
+  </head>
+  <body class="relative">
+    <!-- *** *** *** Navbar Starts Here *** *** *** -->
+
+    <nav
+      class="flex justify-between items-center page-container w-full py-[1.875rem] font-clash-display"
+    >
+      <h4 class="text-heading-4 font-bold">Studio</h4>
+
+      <label for="nav-check" class="xl:hidden">
+        <img src="./assets/icons/hamburger.svg" alt="bars" />
+      </label>
+      <input type="checkbox" class="hidden" id="nav-check" />
+
+      <ul
+        class="flex xl:gap-[2.3125rem] flex-col xl:flex-row text-right xl:text-left w-screen xl:w-fit text-base xl:text-sm font-medium absolute right-0 top-20 xl:static overflow-hidden xl:overflow-auto bg-primary-light xl:bg-transparent h-fit text-white z-10 divide-y divide-white-20 xl:divide-y-0"
+        id="navbar"
+      >
+        <li
+          class="hover:underline cursor-pointer underline-offset-2 pr-7 py-3 xl:pr-0 xl:py-0"
+        >
+          <a href="#top">Home</a>
+        </li>
+        <li
+          class="hover:underline cursor-pointer underline-offset-2 pr-7 py-3 xl:pr-0 xl:py-0"
+        >
+          <a href="#services">Services</a>
+        </li>
+        <li
+          class="hover:underline cursor-pointer underline-offset-2 pr-7 py-3 xl:pr-0 xl:py-0"
+        >
+          <a href="#projects">Portfolio</a>
+        </li>
+        <li
+          class="hover:underline cursor-pointer underline-offset-2 pr-7 py-3 xl:pr-0 xl:py-0"
+        >
+          <a href="#stats">About Us</a>
+        </li>
+        <li
+          class="hover:underline cursor-pointer underline-offset-2 pr-7 py-3 xl:pr-0 xl:py-0"
+        >
+          <a href="#articles">Blog</a>
+        </li>
+      </ul>
+
+      <aside class="hidden xl:block">
+        <a href="#" class="button">Start a Project</a>
+      </aside>
+    </nav>
+    <!-- *** *** *** Navbar Ends Here *** *** *** -->
+
+    <!-- *** *** *** Hero Section Starts Here *** *** *** -->
+
+    <header
+      style="background-image: url(./assets/images/backgrounds/header-bg.svg)"
+      class="bg-contain bg-no-repeat page-container pt-5 xl:pt-[14.1875rem]"
+    >
+      <div class="flex items-end xl:gap-[1.875rem]">
+        <aside class="w-full xl:w-11/12">
+          <!-- *** *** *** Hero Heading *** *** *** -->
+          <h1
+            class="text-heading-4 xl:text-heading-1 font-semibold capitalize text-center xl:text-left"
+          >
+            Design-driven development of your
+            <span class="text-secondary">web product</span>
+          </h1>
+          <!-- *** *** *** Hero Text *** *** *** -->
+          <p
+            class="text-sm xl:text-heading-4 text-grey xl:w-4/6 text-center xl:text-left"
+          >
+            A full-cycle digital service agency. We do from design to end-to-end
+            development to maintenance. We have been worked with more than 50+
+            brands
+          </p>
+        </aside>
+
+        <aside class="w-0 xl:w-1/12">
+          <!-- *** *** *** CTA Button *** *** *** -->
+
+          <img
+            src="./assets/images/cta-button.svg"
+            class="w-12 h-12 fixed right-7 bottom-7 xl:static xl:w-32 xl:h-32 z-[999] duration-500"
+            alt="cta-button"
+            id="cta-button"
+          />
+        </aside>
+      </div>
+
+      <div class="relative">
+        <!-- *** *** *** Hero Image *** *** *** -->
+        <img
+          src="./assets/images/hero-image.svg"
+          class="w-full h-auto mt-[3.75rem] xl:mt-[7.5rem]"
+          alt=""
+        />
+        <img
+          src="./assets/icons/play.svg"
+          class="absolute top-0 bottom-0 left-0 right-0 m-auto w-20 xl:w-auto"
+          alt=""
+        />
+      </div>
+    </header>
+
+    <!-- *** *** *** Hero Section Ends Here *** *** *** -->
+
+    <!-- *** *** *** Statistics Section Starts Here *** *** *** -->
+    <section
+      class="flex flex-col xl:flex-row gap-10 xl:gap-[11.25rem] justify-center items-center page-container py-[3.75rem] xl:py-[7.5rem]"
+      id="stats"
+    >
+      <aside>
+        <h4 class="text-base xl:text-heading-4 md:hidden xl:block">
+          Some Statistics
+        </h4>
+      </aside>
+
+      <aside
+        class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5 xl:gap-[5.3125rem]"
+        id="stat-container"
+      >
+        <h4 class="text-base text-center hidden md:block xl:hidden">
+          Some <br />
+          Statistics
+        </h4>
+        <div
+          class="flex flex-col justify-center items-center gap-[0.1875rem] mx-auto"
+        >
+          <h1 class="text-heading-3 xl:text-heading-1 font-bold leading-none">
+            <span id="project-count">0</span
+            ><span class="text-secondary">+</span>
+          </h1>
+          <h4
+            class="font-roboto text-base xl:text-heading-4 leading-none text-grey"
+          >
+            Project Completed
+          </h4>
+        </div>
+        <div
+          class="flex flex-col justify-center items-center gap-[0.1875rem] mx-auto"
+        >
+          <h1 class="text-heading-3 xl:text-heading-1 font-bold leading-none">
+            <span id="clients-count">0</span
+            ><span class="text-secondary">+</span>
+          </h1>
+          <h4
+            class="font-roboto text-base xl:text-heading-4 leading-none text-grey"
+          >
+            Happy Clients
+          </h4>
+        </div>
+        <div
+          class="flex flex-col justify-center items-center gap-[0.1875rem] mx-auto"
+        >
+          <h1 class="text-heading-3 xl:text-heading-1 font-bold leading-none">
+            <span id="experience-count">0</span
+            ><span class="text-secondary">+</span>
+          </h1>
+          <h4
+            class="font-roboto text-base xl:text-heading-4 leading-none text-grey"
+          >
+            Years of Experience
+          </h4>
+        </div>
+      </aside>
+    </section>
+    <!-- *** *** *** Statistics Section Ends Here *** *** *** -->
+
+    <!-- *** *** *** Services Section Starts Here *** *** *** -->
+    <section
+      class="border border-x-0 border-t-0 xl:border-t border-y border-white-20 flex flex-col xl:flex-row items-center"
+      id="services"
+    >
+      <div
+        class="w-full xl:w-5/12 xl:pl-[11.875rem] mt-10 text-center xl:text-left"
+      >
+        <h2
+          class="text-heading-4 xl:text-heading-2 font-semibold mb-5 xl:mb-10"
+        >
+          We Give Solution & Happiness
+        </h2>
+        <a href="#" class="button">Start A Project</a>
+      </div>
+      <div
+        class="w-11/12 xl:w-7/12 justify-center grid grid-cols-1 xl:grid-cols-2 mt-10 xl:mt-0"
+      >
+        <div
+          class="border xl:border-r-0 xl:border-y-0 border-white-20 p-8 xl:px-14 xl:py-[4.5rem] hover:bg-secondary cursor-pointer transition-[background-color] duration-300"
+        >
+          <img
+            src="./assets/icons/web-development.svg"
+            alt=""
+            class="w-16 h-16"
+          />
+          <h3 class="text-heading-3 font-semibold mt-12">Web Development</h3>
+          <p class="font-roboto mt-4 text-sm xl:text-base xl:font-medium">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis
+            aut repudiandae atque sint debitis dicta laudantium sunt assumenda?
+            Deleniti, tempora?
+          </p>
+        </div>
+        <div
+          class="border border-white-20 border-y-0 p-8 xl:px-14 xl:py-[4.5rem] hover:bg-secondary cursor-pointer transition-[background-color] duration-300"
+        >
+          <img src="./assets/icons/ui-ux.svg" alt="" class="w-16 h-16" />
+          <h3 class="text-heading-3 font-semibold mt-12">UI/UX Design</h3>
+          <p class="font-roboto mt-4 text-sm xl:text-base xl:font-medium">
+            Voluptate eius expedita quae possimus autem esse accusantium
+            suscipit minima harum doloribus impedit, at corrupti sapiente
+            ratione? Obcaecati, esse recusandae?
+          </p>
+        </div>
+        <div
+          class="border border-white-20 xl:border-r-0 p-8 xl:px-14 xl:py-[4.5rem] border-b-0 hover:bg-secondary cursor-pointer transition-[background-color] duration-300"
+        >
+          <img src="./assets/icons/branding.svg" alt="" class="w-16 h-16" />
+          <h3 class="text-heading-3 font-semibold mt-12">Branding</h3>
+          <p class="font-roboto mt-4 text-sm xl:text-base xl:font-medium">
+            Eveniet alias autem repellendus itaque facere hic vitae optio
+            similique beatae ipsa! Pariatur alias eos veritatis adipisci
+            voluptas nostrum ipsa.
+          </p>
+        </div>
+        <div
+          class="border border-white-20 p-8 xl:px-14 xl:py-[4.5rem] border-b-0 hover:bg-secondary cursor-pointer transition-[background-color] duration-300"
+        >
+          <img
+            src="./assets/icons/content-writing.svg"
+            alt=""
+            class="w-16 h-16"
+          />
+          <h3 class="text-heading-3 font-semibold mt-12">Content Writing</h3>
+          <p class="font-roboto mt-4 text-sm xl:text-base xl:font-medium">
+            Quae delectus fugiat saepe quaerat eum eveniet vero nisi veniam eos
+            consectetur veritatis minima, ipsum enim officia? Qui, accusantium
+            veritatis?
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- *** *** *** Services Section Ends Here *** *** *** -->
+
+    <!-- *** *** *** Project Section Starts Here *** *** *** -->
+    <section
+      class="pt-[7.5rem] pb-[3.75rem] bg-no-repeat bg-[size:100%] page-container"
+      style="
+        background-image: url(./assets/images/backgrounds/projects-bg.svg);
+        background-position-y: 51px;
+      "
+      id="projects"
+    >
+      <h2
+        class="text-heading-4 xl:text-heading-2 text-center xl:text-left font-semibold leading-[120%]"
+      >
+        Selected <br class="hidden xl:block" />
+        Projects
+      </h2>
+
+      <div class="flex mt-[3.75rem] flex-col gap-[3.75rem] xl:gap-[7.5rem]">
+        <div class="w-full">
+          <div class="relative rounded-[1.5625rem] cursor-pointer group">
+            <img
+              src="./assets/images/projects/cicu-web-design.svg"
+              class="w-full"
+              alt="cicu-web"
+            />
+
+            <div
+              class="absolute w-full h-full top-0 left-0 bg-black-20 transition duration-500 justify-center items-center opacity-0 group-hover:opacity-100 flex"
+            >
+              <img
+                src="./assets/icons/view.svg"
+                alt="view"
+                class="w-20 xl:w-[6.25rem]"
+              />
+            </div>
+          </div>
+
+          <h1
+            class="text-heading-3 xl:text-heading-1 font-medium capitalize leading-[100%] mt-3 xl:mt-10"
+          >
+            cicu web design
+          </h1>
+          <h6
+            class="text-xs xl:text-base font-medium text-secondary uppercase font-roboto mt-2 leading-[100%]"
+          >
+            Web Design
+          </h6>
+        </div>
+
+        <div class="w-full">
+          <div class="relative rounded-[1.5625rem] cursor-pointer group">
+            <img
+              src="./assets/images/projects/marketer-web-design.svg"
+              class="w-full"
+              alt="marketer-web"
+            />
+
+            <div
+              class="absolute w-full h-full top-0 left-0 bg-black-20 transition duration-500 justify-center items-center opacity-0 group-hover:opacity-100 flex"
+            >
+              <img
+                src="./assets/icons/view.svg"
+                alt="view"
+                class="w-20 xl:w-[6.25rem]"
+              />
+            </div>
+          </div>
+
+          <h1
+            class="text-heading-3 xl:text-heading-1 font-medium capitalize leading-[100%] mt-3 xl:mt-10"
+          >
+            marketer web design
+          </h1>
+          <h6
+            class="text-xs xl:text-base font-medium text-secondary uppercase font-roboto mt-2 leading-[100%]"
+          >
+            Web Design
+          </h6>
+        </div>
+
+        <div class="w-full">
+          <div class="relative rounded-[1.5625rem] cursor-pointer group">
+            <img
+              src="./assets/images/projects/news-web-design.svg"
+              class="w-full"
+              alt="news-web"
+            />
+
+            <div
+              class="absolute w-full h-full top-0 left-0 bg-black-20 transition duration-500 justify-center items-center opacity-0 group-hover:opacity-100 flex"
+            >
+              <img
+                src="./assets/icons/view.svg"
+                alt="view"
+                class="w-20 xl:w-[6.25rem]"
+              />
+            </div>
+          </div>
+
+          <h1
+            class="text-heading-3 xl:text-heading-1 font-medium capitalize leading-[100%] mt-3 xl:mt-10"
+          >
+            news web design
+          </h1>
+          <h6
+            class="text-xs xl:text-base font-medium text-secondary uppercase font-roboto mt-2 leading-[100%]"
+          >
+            Web Design
+          </h6>
+        </div>
+      </div>
+
+      <div class="mt-10 xl:mt-[6.25rem] flex justify-center">
+        <a href="#" class="button flex w-fit gap-3"
+          >View All <img src="./assets/icons/arrow.svg" alt="arrow"
+        /></a>
+      </div>
+    </section>
+    <!-- *** *** *** Project Section Ends Here *** *** *** -->
+
+    <!-- *** *** *** Articles Section Starts Here *** *** *** -->
+    <section id="articles" class="border-t border-white-20 pt-[3.75rem]">
+      <div
+        class="page-container flex flex-col xl:flex-row gap-3 xl:gap-80 justify-between items-center"
+      >
+        <h2
+          class="text-heading-4 xl:text-heading-2 text-center xl:text-left font-semibold"
+        >
+          Our latest articles & resources
+        </h2>
+        <aside class="xl:w-1/3">
+          <!-- <div class="mt-[6.25rem] flex justify-center"> -->
+          <a href="#" class="button flex gap-3 w-fit xl:ml-auto"
+            >View All <img src="./assets/icons/arrow.svg" alt="arrow"
+          /></a>
+          <!-- </div> -->
+        </aside>
+      </div>
+
+      <div class="container-fluid">
+        <div
+          class="mt-10 grid grid-cols-1 xl:grid-cols-2 divide-y xl:divide-x xl:border-t border-x border-white-20 divide-white-20"
+        >
+          <!-- Article Item -->
+
+          <div
+            class="p-6 xl:p-12 relative w-fit h-[28.125rem] xl:h-[34.6875rem] border-t xl:border-t-0 border-white-20"
+          >
+            <img src="./assets/images/articles/mesh-gradient.svg" alt="" />
+            <h3
+              class="text-heading-4 xl:text-heading-3 font-medium mt-[1.875rem]"
+            >
+              How to create awesome mesh gradients
+            </h3>
+            <div
+              class="absolute bottom-6 xl:bottom-12 w-full left-0 px-6 xl:px-12"
+            >
+              <div class="bg-grey h-px w-full my-5"></div>
+              <div class="flex justify-between">
+                <a
+                  class="font-clash-display underline font-medium xl:font-semibold text-base xl:text-heading-5"
+                  href=""
+                  >Read More</a
+                >
+
+                <p class="text-xs text-grey">19 July 2022</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Article Item -->
+
+          <div
+            class="p-6 xl:p-12 relative w-fit h-[28.125rem] xl:h-[34.6875rem]"
+          >
+            <img src="./assets/images/articles/google-fonts.svg" alt="" />
+            <h3
+              class="text-heading-4 xl:text-heading-3 font-medium mt-[1.875rem]"
+            >
+              10 Amazing and free to use google fonts
+            </h3>
+            <div
+              class="absolute bottom-6 xl:bottom-12 w-full left-0 px-6 xl:px-12"
+            >
+              <div class="bg-grey h-px w-full my-5"></div>
+              <div class="flex justify-between">
+                <a
+                  class="font-clash-display underline font-medium xl:font-semibold text-base xl:text-heading-5"
+                  href=""
+                  >Read More</a
+                >
+
+                <p class="text-xs text-grey">19 July 2022</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- *** *** *** Articles Section Ends Here *** *** *** -->
+
+    <!-- *** *** *** Footer Section Starts Here *** *** *** -->
+
+    <section id="footer">
+      <div
+        class="border-y border-white-20 py-[9.375rem] page-container flex flex-col xl:flex-row bg-no-repeat bg-cover"
+        style="
+          background-image: url(./assets/images/backgrounds/contact-bg.svg);
+        "
+      >
+        <h1
+          class="text-heading-3 xl:text-xl font-semibold xl:hidden text-center"
+        >
+          Let’s Discuss Your Project
+        </h1>
+        <div class="flex">
+          <aside class="w-7/12">
+            <h1 class="text-heading-3 xl:text-xl font-semibold hidden xl:block">
+              Let’s Discuss Your Project
+            </h1>
+            <p class="mt-[1.875rem] text-sm xl:text-heading-4">
+              Lorem ipsum dolor sit amet consectetur adipiscing elit ut sed
+              mauris ut id aliquet augue.
+            </p>
+          </aside>
+
+          <aside class="flex justify-end items-end w-5/12">
+            <img
+              src="./assets/images/contact-button.svg"
+              alt="contact-button"
+            />
+          </aside>
+        </div>
+      </div>
+
+      <div
+        class="page-container py-9 flex flex-col xl:flex-row gap-3 xl:gap-0 justify-center xl:justify-between"
+      >
+        <p class="text-sm xl:text-heading-4 text-center xl:text-left">
+          Copyright © 2022 Kartik Bansal . All Rights Reseved.
+        </p>
+
+        <aside
+          class="flex gap-3 xl:gap-6 justify-center xl:justify-normal items-center"
+        >
+          <img src="./assets/icons/052-linkedin.svg" alt="" /><img
+            src="./assets/icons/025-messenger.svg"
+            alt=""
+          /><img src="./assets/icons/096-twitter.svg" alt="" /><img
+            src="./assets/icons/097-twoo.svg"
+            alt=""
+          />
+        </aside>
+      </div>
+    </section>
+
+    <!-- *** *** *** Footer Section Ends Here *** *** *** -->
+
+    <script src="./main.js"></script>
+  </body>
+</html>
