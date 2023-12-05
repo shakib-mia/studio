@@ -105,11 +105,41 @@
           class="w-full h-auto mt-[3.75rem] xl:mt-[7.5rem]"
           alt=""
         />
-        <img
-          src="./assets/icons/play.svg"
-          class="absolute top-0 bottom-0 left-0 right-0 m-auto w-20 xl:w-auto"
-          alt=""
-        />
+        <label for="video-check">
+          <img
+            src="./assets/icons/play.svg"
+            class="absolute top-0 bottom-0 left-0 right-0 m-auto w-20 xl:w-auto cursor-pointer"
+            alt=""
+          />
+        </label>
+      </div>
+      <input type="checkbox" name="" id="video-check" class="hidden" />
+
+      <div
+        class="fixed top-0 left-0 h-screen w-screen overflow-hidden backdrop-blur flex justify-center items-center z-[999]"
+        id="video-container"
+      >
+        <div class="relative w-11/12 xl:w-1/2">
+          <video
+            src="./assets/videos/video.mp4"
+            class="w-full rounded"
+            autoplay
+            controls
+          ></video>
+          <p class="absolute bottom-0 right-0">
+            Video by
+            <a
+              href="https://www.pexels.com/video/drops-of-liquid-on-a-tray-to-be-use-as-samples-3195394/"
+              >Pressmaster</a
+            >
+          </p>
+          <label for="video-check"
+            ><span
+              class="absolute -top-8 right-0 text-heading-5 text-white cursor-pointer"
+              >&times;</span
+            ></label
+          >
+        </div>
       </div>
     </header>
 

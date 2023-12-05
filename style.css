@@ -62,3 +62,11 @@ h6 {
 .service-card {
   @apply px-14 py-[4.5rem] hover:bg-secondary cursor-pointer transition-[background-color] duration-300;
 }
+
+#video-container {
+  @apply hidden;
+}
+
+#video-check:checked + #video-container {
+  @apply flex h-screen;
+}
