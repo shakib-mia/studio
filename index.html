@@ -517,7 +517,7 @@
       // Add a flag to track whether counting has started
       let countingStarted = false;
 
-      window.addEventListener("scroll", () => {
+      const handleCounter = () => {
         const targetElement = document.querySelector("#stat-container");
 
         if (
@@ -534,7 +534,13 @@
           console.log("Element is not in the viewport.");
           // Do something when the element is not in the viewport
         }
-      });
+      };
+
+      if (window.innerWidth >= 768) {
+        window.addEventListener("scroll", handleCounter);
+      } else {
+        handleCounter();
+      }
 
       document.addEventListener("DOMContentLoaded", function () {
         var scrollButton = document.getElementById("cta-button");
