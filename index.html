@@ -65,9 +65,9 @@
 
     <header
       style="background-image: url(./assets/images/backgrounds/header-bg.svg)"
-      class="bg-contain bg-no-repeat page-container pt-5 xl:pt-[14.1875rem]"
+      class="bg-contain 2xl:bg-cover bg-no-repeat pt-5 xl:pt-[14.1875rem]"
     >
-      <div class="flex items-end xl:gap-[1.875rem]">
+      <div class="flex items-end xl:gap-[1.875rem] page-container">
         <aside class="w-full xl:w-11/12">
           <!-- *** *** *** Hero Heading *** *** *** -->
           <h1
@@ -91,18 +91,18 @@
 
           <img
             src="./assets/images/cta-button.svg"
-            class="w-12 h-12 fixed right-7 bottom-7 xl:static xl:w-32 xl:h-32 z-[999] duration-500"
+            class="w-12 h-12 fixed right-7 bottom-7 xl:static xl:w-32 xl:h-32 z-[999] duration-500 cursor-pointer"
             alt="cta-button"
             id="cta-button"
           />
         </aside>
       </div>
 
-      <div class="relative">
+      <div class="relative page-container">
         <!-- *** *** *** Hero Image *** *** *** -->
         <img
-          src="./assets/images/hero-image.svg"
-          class="w-full h-auto mt-[3.75rem] xl:mt-[7.5rem]"
+          src="./assets/images/hero-image.jpg"
+          class="w-full h-auto mt-[3.75rem] xl:mt-[7.5rem] rounded-3xl md:rounded-[2.5rem] lg:rounded-[2.875rem] xl:rounded-[3rem]"
           alt=""
         />
         <label for="video-check">
@@ -110,32 +110,31 @@
             src="./assets/icons/play.svg"
             class="absolute top-0 bottom-0 left-0 right-0 m-auto w-20 xl:w-auto cursor-pointer"
             alt=""
+            onclick="addVideoIframe()"
           />
         </label>
       </div>
       <input type="checkbox" name="" id="video-check" class="hidden" />
 
       <div
-        class="fixed top-0 left-0 h-screen w-screen overflow-hidden backdrop-blur flex justify-center items-center z-[999]"
+        class="fixed top-0 left-0 h-screen w-screen overflow-hidden backdrop-blur-xl flex justify-center items-center z-[999]"
         id="video-container"
       >
         <div class="relative w-11/12 xl:w-1/2">
-          <video
-            src="./assets/videos/video.mp4"
-            class="w-full rounded"
-            autoplay
-            controls
-          ></video>
-          <p class="absolute bottom-0 right-0">
-            Video by
-            <a
-              href="https://www.pexels.com/video/drops-of-liquid-on-a-tray-to-be-use-as-samples-3195394/"
-              >Pressmaster</a
-            >
-          </p>
+          <iframe
+            src="https://www.youtube.com/embed/J4czeOgB-bc?si=27BzpP3l_JXJIqYY"
+            title="YouTube video player"
+            class="w-full rounded aspect-video"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+            id="video"
+          ></iframe>
+
           <label for="video-check"
             ><span
               class="absolute -top-8 right-0 text-heading-5 text-white cursor-pointer"
+              onclick="removeVideoIframe()"
               >&times;</span
             ></label
           >
@@ -147,32 +146,30 @@
 
     <!-- *** *** *** Statistics Section Starts Here *** *** *** -->
     <section
-      class="flex flex-col xl:flex-row gap-10 xl:gap-[11.25rem] justify-center items-center page-container py-[3.75rem] xl:py-[7.5rem]"
+      class="flex flex-col xl:flex-row gap-10 xl:gap-[11.25rem] 2xl:gap-10 justify-center items-center page-container py-[3.75rem] xl:py-[7.5rem]"
       id="stats"
     >
       <aside>
-        <h4 class="text-base xl:text-heading-4 md:hidden xl:block">
-          Some Statistics
-        </h4>
+        <h4 class="text-heading-4 md:hidden xl:block">Some Statistics</h4>
       </aside>
 
       <aside
-        class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5 xl:gap-[5.3125rem]"
+        class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10 xl:gap-[5.3125rem] items-center"
         id="stat-container"
       >
-        <h4 class="text-base text-center hidden md:block xl:hidden">
+        <h4 class="text-heading-4 text-center hidden md:block xl:hidden">
           Some <br />
           Statistics
         </h4>
         <div
           class="flex flex-col justify-center items-center gap-[0.1875rem] mx-auto"
         >
-          <h1 class="text-heading-3 xl:text-heading-1 font-bold leading-none">
+          <h1 class="text-heading-1 font-bold leading-none">
             <span id="project-count">0</span
             ><span class="text-secondary">+</span>
           </h1>
           <h4
-            class="font-roboto text-base xl:text-heading-4 leading-none text-grey"
+            class="font-roboto text-heading-3 xl:text-heading-4 leading-none text-grey"
           >
             Project Completed
           </h4>
@@ -180,12 +177,12 @@
         <div
           class="flex flex-col justify-center items-center gap-[0.1875rem] mx-auto"
         >
-          <h1 class="text-heading-3 xl:text-heading-1 font-bold leading-none">
+          <h1 class="text-heading-1 font-bold leading-none">
             <span id="clients-count">0</span
             ><span class="text-secondary">+</span>
           </h1>
           <h4
-            class="font-roboto text-base xl:text-heading-4 leading-none text-grey"
+            class="font-roboto text-heading-3 xl:text-heading-4 leading-none text-grey"
           >
             Happy Clients
           </h4>
@@ -193,12 +190,12 @@
         <div
           class="flex flex-col justify-center items-center gap-[0.1875rem] mx-auto"
         >
-          <h1 class="text-heading-3 xl:text-heading-1 font-bold leading-none">
+          <h1 class="text-heading-1 font-bold leading-none">
             <span id="experience-count">0</span
             ><span class="text-secondary">+</span>
           </h1>
           <h4
-            class="font-roboto text-base xl:text-heading-4 leading-none text-grey"
+            class="font-roboto text-heading-3 xl:text-heading-4 leading-none text-grey"
           >
             Years of Experience
           </h4>
@@ -216,17 +213,17 @@
         class="w-full xl:w-5/12 xl:pl-[8.125rem] mt-10 text-center xl:text-left"
       >
         <h2
-          class="text-heading-4 xl:text-heading-2 font-semibold mb-5 xl:mb-10"
+          class="text-heading-4 md:text-heading-3 xl:text-heading-2 font-semibold mb-5 xl:mb-10"
         >
           We Give Solution & Happiness
         </h2>
         <a href="#" class="button">Start A Project</a>
       </div>
       <div
-        class="w-11/12 xl:w-7/12 justify-center grid grid-cols-1 xl:grid-cols-2 mt-10 xl:mt-0"
+        class="w-11/12 xl:w-7/12 justify-center grid grid-cols-1 md:grid-cols-2 mt-10 xl:mt-0 divide-x divide-y divide-white-20 border border-white-20 border-b-0 xl:border-y-0 xl:border-r-0"
       >
         <div
-          class="border xl:border-r-0 xl:border-y-0 border-white-20 p-8 xl:px-14 xl:py-[4.5rem] hover:bg-secondary cursor-pointer transition-[background-color] duration-300"
+          class="p-8 xl:px-14 xl:py-[4.5rem] hover:bg-secondary cursor-pointer transition-[background-color] duration-300 border-l-0 xl:border-l-0 border-white-20"
         >
           <img
             src="./assets/icons/web-development.svg"
@@ -241,7 +238,7 @@
           </p>
         </div>
         <div
-          class="border border-white-20 border-y-0 p-8 xl:px-14 xl:py-[4.5rem] hover:bg-secondary cursor-pointer transition-[background-color] duration-300"
+          class="p-8 xl:px-14 xl:py-[4.5rem] hover:bg-secondary cursor-pointer transition-[background-color] duration-300 !border-l-0 md:!border-l xl:border-l md:!border-t-0"
         >
           <img src="./assets/icons/ui-ux.svg" alt="" class="w-16 h-16" />
           <h3 class="text-heading-3 font-semibold mt-12">UI/UX Design</h3>
@@ -252,7 +249,7 @@
           </p>
         </div>
         <div
-          class="border border-white-20 xl:border-r-0 p-8 xl:px-14 xl:py-[4.5rem] border-b-0 hover:bg-secondary cursor-pointer transition-[background-color] duration-300"
+          class="p-8 xl:px-14 xl:py-[4.5rem] hover:bg-secondary cursor-pointer transition-[background-color] duration-300 !border-l-0 xl:border-l md:!border-b-0"
         >
           <img src="./assets/icons/branding.svg" alt="" class="w-16 h-16" />
           <h3 class="text-heading-3 font-semibold mt-12">Branding</h3>
@@ -263,7 +260,7 @@
           </p>
         </div>
         <div
-          class="border border-white-20 p-8 xl:px-14 xl:py-[4.5rem] border-b-0 hover:bg-secondary cursor-pointer transition-[background-color] duration-300"
+          class="p-8 xl:px-14 xl:py-[4.5rem] hover:bg-secondary cursor-pointer transition-[background-color] duration-300 !border-l-0 md:!border-l xl:border-l"
         >
           <img
             src="./assets/icons/content-writing.svg"
@@ -283,125 +280,130 @@
 
     <!-- *** *** *** Project Section Starts Here *** *** *** -->
     <section
-      class="pt-[7.5rem] pb-[3.75rem] bg-no-repeat bg-[size:100%] page-container"
+      class="py-8 xl:pt-[7.5rem] xl:pb-[3.75rem] bg-no-repeat bg-[size:100%]"
       style="
         background-image: url(./assets/images/backgrounds/projects-bg.svg);
         background-position-y: 51px;
       "
       id="projects"
     >
-      <h2
-        class="text-heading-4 xl:text-heading-2 text-center xl:text-left font-semibold leading-[120%]"
-      >
-        Selected <br class="hidden xl:block" />
-        Projects
-      </h2>
+      <div class="page-container">
+        <h2
+          class="text-heading-4 xl:text-heading-2 text-center xl:text-left font-semibold leading-[120%]"
+        >
+          Selected <br class="hidden xl:block" />
+          Projects
+        </h2>
 
-      <div class="flex mt-[3.75rem] flex-col gap-[3.75rem] xl:gap-[7.5rem]">
-        <div class="w-full">
-          <div class="relative rounded-[1.5625rem] cursor-pointer group">
-            <img
-              src="./assets/images/projects/cicu-web-design.svg"
-              class="w-full"
-              alt="cicu-web"
-            />
-
-            <div
-              class="absolute w-full h-full top-0 left-0 bg-black-20 transition duration-500 justify-center items-center opacity-0 group-hover:opacity-100 flex"
-            >
+        <div class="flex mt-[3.75rem] flex-col gap-[3.75rem] xl:gap-[7.5rem]">
+          <div class="w-full">
+            <div class="relative rounded-[1.5625rem] cursor-pointer group">
               <img
-                src="./assets/icons/view.svg"
-                alt="view"
-                class="w-20 xl:w-[6.25rem]"
+                src="./assets/images/projects/cicu-web-design.jpg"
+                class="w-full rounded-lg xl:rounded-3xl"
+                alt="cicu-web"
               />
+
+              <div
+                class="absolute w-full h-full top-0 left-0 bg-black-20 transition duration-500 justify-center items-center opacity-0 group-hover:opacity-100 flex"
+              >
+                <img
+                  src="./assets/icons/view.svg"
+                  alt="view"
+                  class="w-20 xl:w-[6.25rem]"
+                />
+              </div>
             </div>
+
+            <h1
+              class="text-heading-3 xl:text-heading-1 font-medium capitalize leading-[100%] mt-3 xl:mt-10"
+            >
+              cicu web design
+            </h1>
+            <h6
+              class="text-xs xl:text-base font-medium text-secondary uppercase font-roboto mt-2 leading-[100%]"
+            >
+              Web Design
+            </h6>
           </div>
 
-          <h1
-            class="text-heading-3 xl:text-heading-1 font-medium capitalize leading-[100%] mt-3 xl:mt-10"
-          >
-            cicu web design
-          </h1>
-          <h6
-            class="text-xs xl:text-base font-medium text-secondary uppercase font-roboto mt-2 leading-[100%]"
-          >
-            Web Design
-          </h6>
-        </div>
-
-        <div class="w-full">
-          <div class="relative rounded-[1.5625rem] cursor-pointer group">
-            <img
-              src="./assets/images/projects/marketer-web-design.svg"
-              class="w-full"
-              alt="marketer-web"
-            />
-
-            <div
-              class="absolute w-full h-full top-0 left-0 bg-black-20 transition duration-500 justify-center items-center opacity-0 group-hover:opacity-100 flex"
-            >
+          <div class="w-full">
+            <div class="relative rounded-[1.5625rem] cursor-pointer group">
               <img
-                src="./assets/icons/view.svg"
-                alt="view"
-                class="w-20 xl:w-[6.25rem]"
+                src="./assets/images/projects/marketer-web-design.jpg"
+                class="w-full rounded-lg xl:rounded-3xl"
+                alt="marketer-web"
               />
+
+              <div
+                class="absolute w-full h-full top-0 left-0 bg-black-20 transition duration-500 justify-center items-center opacity-0 group-hover:opacity-100 flex"
+              >
+                <img
+                  src="./assets/icons/view.svg"
+                  alt="view"
+                  class="w-20 xl:w-[6.25rem]"
+                />
+              </div>
             </div>
+
+            <h1
+              class="text-heading-3 xl:text-heading-1 font-medium capitalize leading-[100%] mt-3 xl:mt-10"
+            >
+              marketer web design
+            </h1>
+            <h6
+              class="text-xs xl:text-base font-medium text-secondary uppercase font-roboto mt-2 leading-[100%]"
+            >
+              Web Design
+            </h6>
           </div>
 
-          <h1
-            class="text-heading-3 xl:text-heading-1 font-medium capitalize leading-[100%] mt-3 xl:mt-10"
-          >
-            marketer web design
-          </h1>
-          <h6
-            class="text-xs xl:text-base font-medium text-secondary uppercase font-roboto mt-2 leading-[100%]"
-          >
-            Web Design
-          </h6>
-        </div>
-
-        <div class="w-full">
-          <div class="relative rounded-[1.5625rem] cursor-pointer group">
-            <img
-              src="./assets/images/projects/news-web-design.svg"
-              class="w-full"
-              alt="news-web"
-            />
-
-            <div
-              class="absolute w-full h-full top-0 left-0 bg-black-20 transition duration-500 justify-center items-center opacity-0 group-hover:opacity-100 flex"
-            >
+          <div class="w-full">
+            <div class="relative rounded-[1.5625rem] cursor-pointer group">
               <img
-                src="./assets/icons/view.svg"
-                alt="view"
-                class="w-20 xl:w-[6.25rem]"
+                src="./assets/images/projects/news-web-design.jpg"
+                class="w-full rounded-lg xl:rounded-3xl"
+                alt="news-web"
               />
+
+              <div
+                class="absolute w-full h-full top-0 left-0 bg-black-20 transition duration-500 justify-center items-center opacity-0 group-hover:opacity-100 flex"
+              >
+                <img
+                  src="./assets/icons/view.svg"
+                  alt="view"
+                  class="w-20 xl:w-[6.25rem]"
+                />
+              </div>
             </div>
+
+            <h1
+              class="text-heading-3 xl:text-heading-1 font-medium capitalize leading-[100%] mt-3 xl:mt-10"
+            >
+              news web design
+            </h1>
+            <h6
+              class="text-xs xl:text-base font-medium text-secondary uppercase font-roboto mt-2 leading-[100%]"
+            >
+              Web Design
+            </h6>
           </div>
-
-          <h1
-            class="text-heading-3 xl:text-heading-1 font-medium capitalize leading-[100%] mt-3 xl:mt-10"
-          >
-            news web design
-          </h1>
-          <h6
-            class="text-xs xl:text-base font-medium text-secondary uppercase font-roboto mt-2 leading-[100%]"
-          >
-            Web Design
-          </h6>
         </div>
-      </div>
 
-      <div class="mt-10 xl:mt-[6.25rem] flex justify-center">
-        <a href="#" class="button flex w-fit gap-3"
-          >View All <img src="./assets/icons/arrow.svg" alt="arrow"
-        /></a>
+        <div class="mt-10 xl:mt-[6.25rem] flex justify-center">
+          <a href="#" class="button flex w-fit gap-3"
+            >View All <img src="./assets/icons/arrow.svg" alt="arrow"
+          /></a>
+        </div>
       </div>
     </section>
     <!-- *** *** *** Project Section Ends Here *** *** *** -->
 
     <!-- *** *** *** Articles Section Starts Here *** *** *** -->
-    <section id="articles" class="border-t border-white-20 pt-[3.75rem]">
+    <section
+      id="articles"
+      class="border-y border-white-20 pt-8 xl:pt-[3.75rem]"
+    >
       <div
         class="page-container flex flex-col xl:flex-row gap-3 xl:gap-80 justify-between items-center"
       >
@@ -419,84 +421,85 @@
         </aside>
       </div>
 
-      <div class="border-b border-white-20">
+      <!-- <div class="border-b-0 border-white-20"> -->
+      <div
+        class="mt-10 grid grid-cols-1 lg:grid-cols-2 divide-white-20 divide-y xl:divide-y-0 xl:divide-x xl:border-t xl:border-x border-white-20 xl:max-w-[1165px] xl:mx-auto px-[1.25rem] xl:px-0"
+      >
+        <!-- Article Item -->
+
         <div
-          class="mt-10 grid grid-cols-1 xl:grid-cols-2 divide-y xl:divide-x xl:border-t border-x border-white-20 divide-white-20 xl:max-w-[1165px] xl:mx-auto"
+          class="p-6 xl:p-12 relative w-fit h-[28.125rem] xl:h-[34.6875rem] border-t xl:border-t-0 xl:border-b-0 border-white-20 mx-auto border-x xl:border-x-0"
         >
-          <!-- Article Item -->
-
-          <div
-            class="p-6 xl:p-12 relative w-fit h-[28.125rem] xl:h-[34.6875rem] border-t xl:border-t-0 2xl:border-b-0 border-white-20"
+          <img src="./assets/images/articles/mesh-gradient.svg" alt="" />
+          <h3
+            class="text-heading-4 xl:text-heading-3 font-medium mt-[1.875rem]"
           >
-            <img src="./assets/images/articles/mesh-gradient.svg" alt="" />
-            <h3
-              class="text-heading-4 xl:text-heading-3 font-medium mt-[1.875rem]"
-            >
-              How to create awesome mesh gradients
-            </h3>
-            <div
-              class="absolute bottom-6 xl:bottom-12 w-full left-0 px-6 xl:px-12"
-            >
-              <div class="bg-grey h-px w-full my-5"></div>
-              <div class="flex justify-between">
-                <a
-                  class="font-clash-display underline font-medium xl:font-semibold text-base xl:text-heading-5"
-                  href=""
-                  >Read More</a
-                >
+            How to create awesome mesh gradients
+          </h3>
+          <div
+            class="absolute bottom-6 xl:bottom-12 w-full left-0 px-6 xl:px-12"
+          >
+            <div class="bg-grey h-px w-full my-5"></div>
+            <div class="flex justify-between">
+              <a
+                class="font-clash-display underline font-medium xl:font-semibold text-base xl:text-heading-5"
+                href=""
+                >Read More</a
+              >
 
-                <p class="text-xs text-grey">19 July 2022</p>
-              </div>
+              <p class="text-xs text-grey">19 July 2022</p>
             </div>
           </div>
+        </div>
 
-          <!-- Article Item -->
+        <!-- Article Item -->
 
-          <div
-            class="p-6 xl:p-12 relative w-fit h-[28.125rem] xl:h-[34.6875rem] 2xl:border-b-0"
+        <div
+          class="p-6 xl:p-12 relative w-fit h-[28.125rem] xl:h-[34.6875rem] xl:border-y-0 xl:border-b-0 mx-auto border-x xl:border-x-0"
+        >
+          <img src="./assets/images/articles/google-fonts.svg" alt="" />
+          <h3
+            class="text-heading-4 xl:text-heading-3 font-medium mt-[1.875rem]"
           >
-            <img src="./assets/images/articles/google-fonts.svg" alt="" />
-            <h3
-              class="text-heading-4 xl:text-heading-3 font-medium mt-[1.875rem]"
-            >
-              10 Amazing and free to use google fonts
-            </h3>
-            <div
-              class="absolute bottom-6 xl:bottom-12 w-full left-0 px-6 xl:px-12"
-            >
-              <div class="bg-grey h-px w-full my-5"></div>
-              <div class="flex justify-between">
-                <a
-                  class="font-clash-display underline font-medium xl:font-semibold text-base xl:text-heading-5"
-                  href=""
-                  >Read More</a
-                >
+            10 Amazing and free to use google fonts
+          </h3>
+          <div
+            class="absolute bottom-6 xl:bottom-12 w-full left-0 px-6 xl:px-12"
+          >
+            <div class="bg-grey h-px w-full my-5"></div>
+            <div class="flex justify-between">
+              <a
+                class="font-clash-display underline font-medium xl:font-semibold text-base xl:text-heading-5"
+                href=""
+                >Read More</a
+              >
 
-                <p class="text-xs text-grey">19 July 2022</p>
-              </div>
+              <p class="text-xs text-grey">19 July 2022</p>
             </div>
           </div>
         </div>
       </div>
+      <!-- </div> -->
     </section>
     <!-- *** *** *** Articles Section Ends Here *** *** *** -->
 
     <!-- *** *** *** Footer Section Starts Here *** *** *** -->
 
-    <section id="footer">
+    <section
+      id="footer"
+      class="bg-cover bg-no-repeat"
+      style="background-image: url(./assets/images/backgrounds/contact-bg.svg)"
+    >
       <div
-        class="border-y border-white-20 py-[9.375rem] page-container flex flex-col xl:flex-row bg-no-repeat bg-cover"
-        style="
-          background-image: url(./assets/images/backgrounds/contact-bg.svg);
-        "
+        class="border-b border-white-20 py-20 xl:py-[9.375rem] page-container flex flex-col xl:flex-row"
       >
         <h1
           class="text-heading-3 xl:text-xl font-semibold xl:hidden text-center"
         >
           Let’s Discuss Your Project
         </h1>
-        <div class="flex">
-          <aside class="w-7/12">
+        <div class="flex md:w-1/2 mx-auto lg:w-11/12 xl:w-full">
+          <aside class="w-full lg:w-7/12">
             <h1 class="text-heading-3 xl:text-xl font-semibold hidden xl:block">
               Let’s Discuss Your Project
             </h1>
@@ -506,9 +509,10 @@
             </p>
           </aside>
 
-          <aside class="flex justify-end items-end w-5/12">
+          <aside class="flex justify-end items-end lg:w-5/12">
             <img
               src="./assets/images/contact-button.svg"
+              class="cursor-pointer"
               alt="contact-button"
             />
           </aside>
@@ -618,6 +622,19 @@
             clearInterval(intervalId);
           }
         }, time);
+      }
+
+      function addVideoIframe() {
+        var videoContainer = document.getElementById("video-container");
+        var videoIframe = document.getElementById("video");
+        videoIframe.src =
+          "https://www.youtube.com/embed/J4czeOgB-bc?si=27BzpP3l_JXJIqYY";
+        videoContainer.style.display = "flex"; // Show the video container
+      }
+
+      function removeVideoIframe() {
+        var videoContainer = document.getElementById("video-container");
+        videoContainer.style.display = "none"; // Hide the video container
       }
     </script>
   </body>

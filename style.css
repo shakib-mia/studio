@@ -32,7 +32,7 @@ p {
 
 .page-container {
   /* @apply px-5 xl:px-[8.125rem]; */
-  @apply xl:max-w-[1165px] xl:mx-auto;
+  @apply 2xl:max-w-[1165px] 2xl:mx-auto px-5 xl:px-[8.125rem] 2xl:px-5;
 }
 
 .container-fluid {
