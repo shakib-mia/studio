@@ -1,3 +1,5 @@
+const { default: Lenis } = require("@studio-freight/lenis");
+
 function isElementInViewport(element) {
   const rect = element.getBoundingClientRect();
   return rect.top;
@@ -6,7 +8,7 @@ function isElementInViewport(element) {
 // Add a flag to track whether counting has started
 let countingStarted = false;
 
-window.addEventListener("scroll", () => {
+const handleCounter = () => {
   const targetElement = document.querySelector("#stat-container");
 
   if (
@@ -23,7 +25,13 @@ window.addEventListener("scroll", () => {
     console.log("Element is not in the viewport.");
     // Do something when the element is not in the viewport
   }
-});
+};
+
+if (window.innerWidth >= 768) {
+  window.addEventListener("scroll", handleCounter);
+} else {
+  handleCounter();
+}
 
 document.addEventListener("DOMContentLoaded", function () {
   var scrollButton = document.getElementById("cta-button");
@@ -69,3 +77,29 @@ function startCounting(id, count, time) {
     }
   }, time);
 }
+
+function addVideoIframe() {
+  var videoContainer = document.getElementById("video-container");
+  var videoIframe = document.getElementById("video");
+  videoIframe.src =
+    "https://www.youtube.com/embed/J4czeOgB-bc?si=27BzpP3l_JXJIqYY";
+  videoContainer.style.display = "flex"; // Show the video container
+}
+
+function removeVideoIframe() {
+  var videoContainer = document.getElementById("video-container");
+  videoContainer.style.display = "none"; // Hide the video container
+}
+
+const lenis = new Lenis();
+
+lenis.on("scroll", (e) => {
+  // console.log(e)
+});
+
+function raf(time) {
+  lenis.raf(time);
+  requestAnimationFrame(raf);
+}
+
+requestAnimationFrame(raf);

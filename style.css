@@ -32,7 +32,7 @@ p {
 
 .page-container {
   /* @apply px-5 xl:px-[8.125rem]; */
-  @apply 2xl:max-w-[1165px] 2xl:mx-auto px-5 xl:px-[8.125rem] 2xl:px-5;
+  @apply max-w-[1255px] mx-auto px-5 xl:px-0;
 }
 
 .container-fluid {
@@ -70,4 +70,8 @@ h6 {
 
 #video-check:checked + #video-container {
   @apply flex h-screen;
+}
+
+::-webkit-scrollbar {
+  width: 0;
 }
