@@ -8,8 +8,10 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Clash+Display&display=swap"
     />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
     <link rel="stylesheet" href="./style.css" />
-    <title>Vite App</title>
+    <title>Studio</title>
   </head>
   <body class="relative">
     <!-- *** *** *** Navbar Starts Here *** *** *** -->
@@ -72,6 +74,7 @@
           <!-- *** *** *** Hero Heading *** *** *** -->
           <h1
             class="text-heading-4 xl:text-heading-1 font-semibold capitalize text-center xl:text-left"
+            data-aos="fade-right"
           >
             Design-driven development of your
             <span class="text-secondary">web product</span>
@@ -79,6 +82,8 @@
           <!-- *** *** *** Hero Text *** *** *** -->
           <p
             class="text-sm xl:text-heading-4 text-grey xl:w-4/6 text-center xl:text-left"
+            data-aos="fade-right"
+            data-aos-delay="200"
           >
             A full-cycle digital service agency. We do from design to end-to-end
             development to maintenance. We have been worked with more than 50+
@@ -98,7 +103,11 @@
         </aside>
       </div>
 
-      <div class="relative page-container">
+      <div
+        class="relative page-container"
+        data-aos="fade-up"
+        data-aos-delay="400"
+      >
         <!-- *** *** *** Hero Image *** *** *** -->
         <img
           src="./assets/images/hero-image.jpg"
@@ -284,16 +293,21 @@
         <div class="w-full xl:w-5/12 text-center xl:text-left">
           <h2
             class="text-heading-4 md:text-heading-3 xl:text-heading-2 font-semibold mb-5 xl:mb-10"
+            data-aos="fade-right"
           >
             We Give Solution & Happiness
           </h2>
-          <a href="#" class="button">Start A Project</a>
+          <div data-aos="fade-right" data-aos-delay="200">
+            <a href="#" class="button">Start A Project</a>
+          </div>
         </div>
 
         <div class="w-full xl:w-7/12 mt-10 xl:mt-0">
           <div class="grid grid-cols-1 md:grid-cols-2">
             <div
               class="p-8 md:p-12 xl:p-16 border md:border-y-0 border-[#FFFFFF33] md:border-b md:border-t xl:border-t-0 hover:bg-secondary transition cursor-pointer"
+              data-aos="zoom-in"
+              data-aos-delay="100"
             >
               <img
                 src="./assets/icons/web-development.svg"
@@ -311,6 +325,8 @@
             </div>
             <div
               class="p-8 md:p-12 xl:p-16 !border-x md:!border-l-0 border-t-0 border-[#FFFFFF33] border-b md:border-t xl:border-t-0 hover:bg-secondary transition cursor-pointer"
+              data-aos="zoom-in"
+              data-aos-delay="100"
             >
               <img src="./assets/icons/ui-ux.svg" alt="" class="w-16 h-16" />
               <h3 class="text-heading-3 font-semibold mt-12">UI/UX Design</h3>
@@ -322,6 +338,8 @@
             </div>
             <div
               class="p-8 md:p-12 xl:p-16 !border-x md:border-x-0 border-[#FFFFFF33] border-b md:border-b-0 hover:bg-secondary transition cursor-pointer"
+              data-aos="zoom-in"
+              data-aos-delay="300"
             >
               <img src="./assets/icons/branding.svg" alt="" class="w-16 h-16" />
               <h3 class="text-heading-3 font-semibold mt-12">Branding</h3>
@@ -333,6 +351,8 @@
             </div>
             <div
               class="p-8 md:p-12 xl:p-16 !border-x md:!border-l-0 border-[#FFFFFF33] hover:bg-secondary transition cursor-pointer"
+              data-aos="zoom-in"
+              data-aos-delay="400"
             >
               <img
                 src="./assets/icons/content-writing.svg"
@@ -367,13 +387,14 @@
       <div class="page-container">
         <h2
           class="text-heading-4 xl:text-heading-2 text-center xl:text-left font-semibold leading-[120%]"
+          data-aos="fade-right"
         >
           Selected <br class="hidden xl:block" />
           Projects
         </h2>
 
         <div class="flex mt-[3.75rem] flex-col gap-[3.75rem] xl:gap-[7.5rem]">
-          <div class="w-full">
+          <div class="w-full" data-aos="zoom-in">
             <div class="relative rounded-[1.5625rem] cursor-pointer group">
               <img
                 src="./assets/images/projects/cicu-web-design.jpg"
@@ -404,7 +425,7 @@
             </h6>
           </div>
 
-          <div class="w-full">
+          <div class="w-full" data-aos="zoom-in">
             <div class="relative rounded-[1.5625rem] cursor-pointer group">
               <img
                 src="./assets/images/projects/marketer-web-design.jpg"
@@ -435,7 +456,7 @@
             </h6>
           </div>
 
-          <div class="w-full">
+          <div class="w-full" data-aos="zoom-in">
             <div class="relative rounded-[1.5625rem] cursor-pointer group">
               <img
                 src="./assets/images/projects/news-web-design.jpg"
@@ -486,6 +507,7 @@
       >
         <h2
           class="text-heading-4 xl:text-heading-2 text-center xl:text-left font-semibold"
+          data-aos="fade-right"
         >
           Our latest articles & resources
         </h2>
@@ -500,7 +522,7 @@
 
       <!-- <div class="border-b-0 border-white-20"> -->
       <div
-        class="mt-10 grid grid-cols-1 lg:grid-cols-2 divide-white-20 divide-y xl:divide-y-0 xl:divide-x xl:border-t xl:border-x border-white-20 xl:max-w-[1165px] xl:mx-auto px-[1.25rem] xl:px-0"
+        class="mt-10 grid grid-cols-1 lg:grid-cols-2 divide-white-20 divide-y xl:divide-y-0 xl:divide-x xl:border-t xl:border-x border-white-20 page-container"
       >
         <!-- Article Item -->
 
@@ -591,6 +613,7 @@
               <img
                 src="./assets/images/contact-button.svg"
                 class="cursor-pointer"
+                data-aos="zoom-in"
                 alt="contact-button"
               />
             </aside>
@@ -618,13 +641,21 @@
         </aside>
       </div>
 
-      <div class="text-center">
-        Development Copyright @<a href="https://raddito.com/">Raddito</a>
+      <div class="text-center mb-3">
+        Development Copyright @<a href="https://raddito.com/" target="_blank"
+          >Raddito</a
+        >
         <span id="year"></span>. All rights Reserved
       </div>
     </section>
 
     <!-- *** *** *** Footer Section Ends Here *** *** *** -->
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+      AOS.init();
+    </script>
 
     <script>
       function isElementInViewport(element) {
