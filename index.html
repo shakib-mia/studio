@@ -73,7 +73,7 @@
         <aside class="w-full xl:w-11/12">
           <!-- *** *** *** Hero Heading *** *** *** -->
           <h1
-            class="text-heading-4 xl:text-heading-1 font-semibold capitalize text-center xl:text-left"
+            class="text-heading-3 xl:text-heading-1 font-semibold capitalize text-center xl:text-left"
             data-aos="fade-right"
           >
             Design-driven development of your
@@ -81,7 +81,7 @@
           </h1>
           <!-- *** *** *** Hero Text *** *** *** -->
           <p
-            class="text-sm xl:text-heading-4 text-grey xl:w-4/6 text-center xl:text-left"
+            class="text-sm xl:text-heading-4 text-grey xl:w-4/6 text-center xl:text-left mt-6"
             data-aos="fade-right"
             data-aos-delay="200"
           >
@@ -96,7 +96,7 @@
 
           <img
             src="./assets/images/cta-button.svg"
-            class="w-12 h-12 fixed right-7 bottom-7 xl:static xl:w-32 xl:h-32 z-[999] duration-500 cursor-pointer"
+            class="w-20 h-20 fixed right-7 bottom-7 xl:static xl:w-32 xl:h-32 z-[999] duration-500 cursor-pointer"
             alt="cta-button"
             id="cta-button"
           />
@@ -541,7 +541,7 @@
             <div class="bg-grey h-px w-full my-5"></div>
             <div class="flex justify-between">
               <a
-                class="font-clash-display underline font-medium xl:font-semibold text-base xl:text-heading-5"
+                class="font-clash-display underline hover:no-underline font-medium xl:font-semibold text-base xl:text-heading-5"
                 href=""
                 >Read More</a
               >
@@ -568,7 +568,7 @@
             <div class="bg-grey h-px w-full my-5"></div>
             <div class="flex justify-between">
               <a
-                class="font-clash-display underline font-medium xl:font-semibold text-base xl:text-heading-5"
+                class="font-clash-display underline hover:no-underline font-medium xl:font-semibold text-base xl:text-heading-5"
                 href=""
                 >Read More</a
               >
@@ -625,7 +625,13 @@
         class="page-container py-9 flex flex-col xl:flex-row gap-3 xl:gap-0 justify-center xl:justify-between"
       >
         <p class="text-sm xl:text-heading-4 text-center xl:text-left">
-          Copyright © 2022 Kartik Bansal . All Rights Reseved.
+          Copyright ©2022
+          <a
+            href="https://www.figma.com/file/5Qocnzgr3m9770W0Z1nPHy/Landing-Page-UI-Kit-(Community)?type=design&node-id=502-3740&mode=design&t=Z7w8azF78322ygWO-0"
+            class="underline hover:no-underline"
+            >Kartik Bansal</a
+          >
+          . All Rights Reseved.
         </p>
 
         <aside
@@ -646,8 +652,11 @@
         </aside>
       </div>
 
-      <div class="text-center mb-3">
-        Development Copyright @<a href="https://raddito.com/" target="_blank"
+      <div class="text-center mb-3 page-container">
+        Development Copyright @<a
+          class="underline hover:no-underline"
+          href="https://raddito.com/"
+          target="_blank"
           >Raddito</a
         >
         <span id="year"></span>. All rights Reserved
@@ -656,6 +665,7 @@
 
     <!-- *** *** *** Footer Section Ends Here *** *** *** -->
 
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.35/dist/lenis.min.js"></script> 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
     <script>
@@ -663,6 +673,22 @@
     </script>
 
     <script>
+//  const { default: Lenis } = require("@studio-freight/lenis");
+
+
+      const lenis = new Lenis();
+
+      lenis.on("scroll", (e) => {
+        // console.log(e)
+      });
+
+      function raf(time) {
+        lenis.raf(time);
+        requestAnimationFrame(raf);
+      }
+
+      requestAnimationFrame(raf);
+
       function isElementInViewport(element) {
         const rect = element.getBoundingClientRect();
         return rect.top;
@@ -678,6 +704,8 @@
           isElementInViewport(targetElement) <= window.innerHeight &&
           !countingStarted
         ) {
+          // alert("in viewport");
+          console.log("in viewport");
           countingStarted = true;
           startCounting("project-count", 250, 10);
           startCounting("clients-count", 150, 10);
