@@ -141,7 +141,7 @@
 
           <label for="video-check"
             ><span
-              class="absolute -top-8 right-0 text-heading-5 text-white cursor-pointer"
+              class="absolute -top-20 right-0 text-heading-2 text-white cursor-pointer"
               onclick="removeVideoIframe()"
               >&times;</span
             ></label
@@ -213,77 +213,6 @@
     <!-- *** *** *** Statistics Section Ends Here *** *** *** -->
 
     <!-- *** *** *** Services Section Starts Here *** *** *** -->
-    <!-- <section
-      class="border border-x-0 border-t-0 xl:border-t border-y border-white-20 flex flex-col xl:flex-row items-center"
-      id="services"
-    >
-      <div
-        class="w-full xl:w-5/12 xl:pl-[8.125rem] mt-10 text-center xl:text-left"
-      >
-        <h2
-          class="text-heading-4 md:text-heading-3 xl:text-heading-2 font-semibold mb-5 xl:mb-10"
-        >
-          We Give Solution & Happiness
-        </h2>
-        <a href="#" class="button">Start A Project</a>
-      </div>
-      <div
-        class="w-11/12 xl:w-7/12 justify-center grid grid-cols-1 md:grid-cols-2 mt-10 xl:mt-0 divide-x divide-y divide-white-20 border border-white-20 border-b-0 xl:border-y-0 xl:border-r-0"
-      >
-        <div
-          class="p-8 xl:px-14 xl:py-[4.5rem] hover:bg-secondary cursor-pointer transition-[background-color] duration-300 border-l-0 xl:border-l-0 border-white-20"
-        >
-          <img
-            src="./assets/icons/web-development.svg"
-            alt=""
-            class="w-16 h-16"
-          />
-          <h3 class="text-heading-3 font-semibold mt-12">Web Development</h3>
-          <p class="font-roboto mt-4 text-sm xl:text-base xl:font-medium">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis
-            aut repudiandae atque sint debitis dicta laudantium sunt assumenda?
-            Deleniti, tempora?
-          </p>
-        </div>
-        <div
-          class="p-8 xl:px-14 xl:py-[4.5rem] hover:bg-secondary cursor-pointer transition-[background-color] duration-300 !border-l-0 md:!border-l xl:border-l md:!border-t-0"
-        >
-          <img src="./assets/icons/ui-ux.svg" alt="" class="w-16 h-16" />
-          <h3 class="text-heading-3 font-semibold mt-12">UI/UX Design</h3>
-          <p class="font-roboto mt-4 text-sm xl:text-base xl:font-medium">
-            Voluptate eius expedita quae possimus autem esse accusantium
-            suscipit minima harum doloribus impedit, at corrupti sapiente
-            ratione? Obcaecati, esse recusandae?
-          </p>
-        </div>
-        <div
-          class="p-8 xl:px-14 xl:py-[4.5rem] hover:bg-secondary cursor-pointer transition-[background-color] duration-300 !border-l-0 xl:border-l md:!border-b-0"
-        >
-          <img src="./assets/icons/branding.svg" alt="" class="w-16 h-16" />
-          <h3 class="text-heading-3 font-semibold mt-12">Branding</h3>
-          <p class="font-roboto mt-4 text-sm xl:text-base xl:font-medium">
-            Eveniet alias autem repellendus itaque facere hic vitae optio
-            similique beatae ipsa! Pariatur alias eos veritatis adipisci
-            voluptas nostrum ipsa.
-          </p>
-        </div>
-        <div
-          class="p-8 xl:px-14 xl:py-[4.5rem] hover:bg-secondary cursor-pointer transition-[background-color] duration-300 !border-l-0 md:!border-l xl:border-l"
-        >
-          <img
-            src="./assets/icons/content-writing.svg"
-            alt=""
-            class="w-16 h-16"
-          />
-          <h3 class="text-heading-3 font-semibold mt-12">Content Writing</h3>
-          <p class="font-roboto mt-4 text-sm xl:text-base xl:font-medium">
-            Quae delectus fugiat saepe quaerat eum eveniet vero nisi veniam eos
-            consectetur veritatis minima, ipsum enim officia? Qui, accusantium
-            veritatis?
-          </p>
-        </div>
-      </div>
-    </section> -->
 
     <section
       class="border border-t-0 xl:border-t border-y border-[#FFFFFF33] border-x-0"
@@ -511,15 +440,12 @@
           Our latest articles & resources
         </h2>
         <aside class="xl:w-1/3">
-          <!-- <div class="mt-[6.25rem] flex justify-center"> -->
           <a href="#" class="button flex gap-3 w-fit xl:ml-auto"
             >View All <img src="./assets/icons/arrow.svg" alt="arrow"
           /></a>
-          <!-- </div> -->
         </aside>
       </div>
-
-      <!-- <div class="border-b-0 border-white-20"> -->
+      
       <div
         class="mt-10 grid grid-cols-1 lg:grid-cols-2 divide-white-20 divide-y xl:divide-y-0 xl:divide-x xl:border-t xl:border-x border-white-20 page-container"
       >
@@ -577,7 +503,6 @@
           </div>
         </div>
       </div>
-      <!-- </div> -->
     </section>
     <!-- *** *** *** Articles Section Ends Here *** *** *** -->
 
@@ -673,13 +598,9 @@
     </script>
 
     <script>
-//  const { default: Lenis } = require("@studio-freight/lenis");
-
-
       const lenis = new Lenis();
 
       lenis.on("scroll", (e) => {
-        // console.log(e)
       });
 
       function raf(time) {
@@ -772,9 +693,9 @@
         }, time);
       }
 
+      var videoIframe = document.getElementById("video");
       function addVideoIframe() {
         var videoContainer = document.getElementById("video-container");
-        var videoIframe = document.getElementById("video");
         videoIframe.src =
           "https://www.youtube.com/embed/J4czeOgB-bc?si=27BzpP3l_JXJIqYY";
         videoContainer.style.display = "flex"; // Show the video container
@@ -782,10 +703,9 @@
 
       function removeVideoIframe() {
         var videoContainer = document.getElementById("video-container");
+        videoIframe.src = ''
         videoContainer.style.display = "none"; // Hide the video container
       }
-
-      // const date = new Date()
       document.getElementById("year").innerText = new Date().getFullYear();
     </script>
   </body>
