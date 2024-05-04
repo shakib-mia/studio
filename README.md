@@ -4,6 +4,8 @@ Studio's website serves as a digital showcase, highlighting its expertise in ful
 
 Through carefully curated content, the website shares insights and latest trends in the digital design space, reinforcing Studio's position as a thought leader. As a platform designed to attract potential clients, the website effectively communicates Studio's values and invites visitors to start a project, emphasizing their commitment to innovation and client satisfaction.
 
+[Click here](https://studio-farm.netlify.app/) to get the live preview
+
 ## Packages
 
 1. **AOS (Animate on Scroll)**: For Scrolling Animation
