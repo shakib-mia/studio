@@ -16,49 +16,52 @@
     <!-- *** *** *** Navbar Starts Here *** *** *** -->
 
     <nav
-      class="flex justify-between items-center page-container w-full py-[1.875rem] font-clash-display"
+      class="w-screen z-[9999]"
+      id="navbar"
     >
-      <a href="#" class="text-heading-4 font-bold">Studio</a>
+      <div class="flex justify-between items-center page-container w-full py-4 xl:py-[1.875rem] font-clash-display transition">
+        <a href="#" class="text-heading-3 xl:text-heading-4 font-bold">Studio</a>
 
-      <label for="nav-check" class="xl:hidden">
-        <img src="./assets/icons/hamburger.svg" alt="bars" />
-      </label>
-      <input type="checkbox" class="hidden" id="nav-check" />
+        <label for="nav-check" class="xl:hidden">
+          <img src="./assets/icons/hamburger.svg" class="w-10" alt="bars" />
+        </label>
+        <input type="checkbox" class="hidden" id="nav-check" />
 
-      <ul
-        class="flex xl:gap-[2.3125rem] flex-col xl:flex-row text-right xl:text-left w-screen xl:w-fit text-base xl:text-sm font-medium absolute right-0 top-20 xl:static overflow-hidden xl:overflow-auto bg-primary-light xl:bg-transparent h-fit text-white z-10 divide-y divide-white-20 xl:divide-y-0"
-        id="navbar"
-      >
-        <li
-          class="hover:underline cursor-pointer underline-offset-2 pr-7 py-3 xl:pr-0 xl:py-0"
+        <ul
+          class="flex xl:gap-[2.3125rem] flex-col xl:flex-row text-right xl:text-left w-screen xl:w-fit text-base xl:text-sm font-medium absolute right-0 top-20 xl:static overflow-hidden xl:overflow-auto bg-primary-light xl:bg-transparent h-fit text-white z-10 divide-y divide-white-20 xl:divide-y-0"
+          id="navbar"
         >
-          <a href="#top">Home</a>
-        </li>
-        <li
-          class="hover:underline cursor-pointer underline-offset-2 pr-7 py-3 xl:pr-0 xl:py-0"
-        >
-          <a href="#services">Services</a>
-        </li>
-        <li
-          class="hover:underline cursor-pointer underline-offset-2 pr-7 py-3 xl:pr-0 xl:py-0"
-        >
-          <a href="#projects">Portfolio</a>
-        </li>
-        <li
-          class="hover:underline cursor-pointer underline-offset-2 pr-7 py-3 xl:pr-0 xl:py-0"
-        >
-          <a href="#stats">About Us</a>
-        </li>
-        <li
-          class="hover:underline cursor-pointer underline-offset-2 pr-7 py-3 xl:pr-0 xl:py-0"
-        >
-          <a href="#articles">Blog</a>
-        </li>
-      </ul>
+          <li
+            class="hover:underline cursor-pointer underline-offset-2 pr-7 py-3 xl:pr-0 xl:py-0"
+          >
+            <a href="#top">Home</a>
+          </li>
+          <li
+            class="hover:underline cursor-pointer underline-offset-2 pr-7 py-3 xl:pr-0 xl:py-0"
+          >
+            <a href="#services">Services</a>
+          </li>
+          <li
+            class="hover:underline cursor-pointer underline-offset-2 pr-7 py-3 xl:pr-0 xl:py-0"
+          >
+            <a href="#projects">Portfolio</a>
+          </li>
+          <li
+            class="hover:underline cursor-pointer underline-offset-2 pr-7 py-3 xl:pr-0 xl:py-0"
+          >
+            <a href="#stats">About Us</a>
+          </li>
+          <li
+            class="hover:underline cursor-pointer underline-offset-2 pr-7 py-3 xl:pr-0 xl:py-0"
+          >
+            <a href="#articles">Blog</a>
+          </li>
+        </ul>
 
-      <aside class="hidden xl:block">
-        <a href="#" class="button">Start a Project</a>
-      </aside>
+        <aside class="hidden xl:block">
+          <a href="#" class="button">Start a Project</a>
+        </aside>
+      </div>
     </nav>
     <!-- *** *** *** Navbar Ends Here *** *** *** -->
 
@@ -66,7 +69,7 @@
 
     <header
       style="background-image: url(./assets/images/backgrounds/header-bg.svg)"
-      class="bg-contain 2xl:bg-cover bg-no-repeat pt-5 xl:pt-[14.1875rem]"
+      class="bg-contain 2xl:bg-cover bg-no-repeat pt-28 xl:pt-[14.1875rem]"
     >
       <div class="flex items-end xl:gap-[1.875rem] page-container">
         <aside class="w-full xl:w-11/12">
@@ -154,7 +157,7 @@
 
     <!-- *** *** *** Statistics Section Starts Here *** *** *** -->
     <section
-      class="flex flex-col xl:flex-row gap-10 xl:gap-[11.25rem] 2xl:gap-10 justify-center items-center page-container py-[3.75rem] xl:py-[7.5rem]"
+      class="flex flex-col xl:flex-row gap-5 xl:gap-[11.25rem] 2xl:gap-10 justify-center items-center page-container py-[3.75rem] xl:py-[7.5rem]"
       id="stats"
     >
       <aside>
@@ -162,7 +165,7 @@
       </aside>
 
       <aside
-        class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10 xl:gap-[5.3125rem] items-center"
+        class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 xl:gap-[5.3125rem] items-center"
         id="stat-container"
       >
         <h4 class="text-heading-4 text-center hidden md:block xl:hidden">
@@ -172,12 +175,12 @@
         <div
           class="flex flex-col justify-center items-center gap-[0.1875rem] mx-auto"
         >
-          <h1 class="text-heading-1 font-bold leading-none">
+          <h1 class="text-heading-2 xl:text-heading-1 font-bold leading-none">
             <span id="project-count">0</span
             ><span class="text-secondary">+</span>
           </h1>
           <h4
-            class="font-roboto text-heading-3 xl:text-heading-4 leading-none text-grey"
+            class="font-roboto text-heading-5 xl:text-heading-4 leading-none text-grey"
           >
             Project Completed
           </h4>
@@ -185,12 +188,12 @@
         <div
           class="flex flex-col justify-center items-center gap-[0.1875rem] mx-auto"
         >
-          <h1 class="text-heading-1 font-bold leading-none">
+          <h1 class="text-heading-2 xl:text-heading-1 font-bold leading-none">
             <span id="clients-count">0</span
             ><span class="text-secondary">+</span>
           </h1>
           <h4
-            class="font-roboto text-heading-3 xl:text-heading-4 leading-none text-grey"
+            class="font-roboto text-heading-5 xl:text-heading-4 leading-none text-grey"
           >
             Happy Clients
           </h4>
@@ -198,12 +201,12 @@
         <div
           class="flex flex-col justify-center items-center gap-[0.1875rem] mx-auto"
         >
-          <h1 class="text-heading-1 font-bold leading-none">
+          <h1 class="text-heading-2 xl:text-heading-1 font-bold leading-none">
             <span id="experience-count">0</span
             ><span class="text-secondary">+</span>
           </h1>
           <h4
-            class="font-roboto text-heading-3 xl:text-heading-4 leading-none text-grey"
+            class="font-roboto text-heading-5 xl:text-heading-4 leading-none text-grey"
           >
             Years of Experience
           </h4>
@@ -232,69 +235,62 @@
 
         <div class="w-full xl:w-7/12 mt-10 xl:mt-0">
           <div class="grid grid-cols-1 md:grid-cols-2">
-            <div
-              class="p-8 md:p-12 xl:p-16 border md:border-y-0 border-[#FFFFFF33] md:border-b md:border-t xl:border-t-0 hover:bg-secondary transition cursor-pointer"
-              data-aos="zoom-in"
-              data-aos-delay="100"
-            >
-              <img
-                src="./assets/icons/web-development.svg"
-                alt=""
-                class="w-16 h-16"
-              />
-              <h3 class="text-heading-3 font-semibold mt-12">
-                Web Development
-              </h3>
-              <p class="font-roboto mt-4 text-sm xl:text-base xl:font-medium">
-                Eveniet alias autem repellendus itaque facere hic vitae optio
-                similique beatae ipsa! Pariatur alias eos veritatis adipisci
-                voluptas nostrum ipsa.
-              </p>
+            <div class="h-full" data-aos="zoom-in" data-aos-delay="100">
+              <div
+                class="p-8 md:p-12 xl:p-16 border md:border-y-0 border-[#FFFFFF33] md:border-b md:border-t xl:border-t-0 hover:bg-secondary transition h-full"                
+              >
+                <img
+                  src="./assets/icons/web-development.svg"
+                  alt=""
+                  class="w-16 h-16"
+                />
+                <h3 class="text-heading-3 font-semibold mt-4 xl:mt-12 whitespace-nowrap">
+                  Web Development
+                </h3>
+                <p class="font-roboto mt-2 xl:mt-4 text-sm xl:text-base xl:font-medium">
+                  Professional web development solutions for responsive, scalable, and high-performance websites. Custom designs, full-stack development, and seamless user experiences.
+                </p>
+              </div>
             </div>
-            <div
-              class="p-8 md:p-12 xl:p-16 !border-x md:!border-l-0 border-t-0 border-[#FFFFFF33] border-b md:border-t xl:border-t-0 hover:bg-secondary transition cursor-pointer"
-              data-aos="zoom-in"
-              data-aos-delay="100"
-            >
-              <img src="./assets/icons/ui-ux.svg" alt="" class="w-16 h-16" />
-              <h3 class="text-heading-3 font-semibold mt-12">UI/UX Design</h3>
-              <p class="font-roboto mt-4 text-sm xl:text-base xl:font-medium">
-                Eveniet alias autem repellendus itaque facere hic vitae optio
-                similique beatae ipsa! Pariatur alias eos veritatis adipisci
-                voluptas nostrum ipsa.
-              </p>
+            <div class="h-full" data-aos="zoom-in" data-aos-delay="100">
+              <div
+                class="p-8 md:p-12 xl:p-16 !border-x md:!border-l-0 border-t-0 border-[#FFFFFF33] border-b md:border-t xl:border-t-0 hover:bg-secondary transition h-full"
+                
+              >
+                <img src="./assets/icons/ui-ux.svg" alt="" class="w-16 h-16" />
+                <h3 class="text-heading-3 font-semibold mt-4 xl:mt-12">UI/UX Design</h3>
+                <p class="font-roboto mt-2 xl:mt-4 text-sm xl:text-base xl:font-medium">
+                  Expert UI/UX design for intuitive, engaging, and user-friendly experiences. We create stunning, responsive, and conversion-focused interfaces for your brand.
+                </p>
+              </div>
             </div>
-            <div
-              class="p-8 md:p-12 xl:p-16 !border-x md:border-x-0 border-[#FFFFFF33] border-b md:border-b-0 hover:bg-secondary transition cursor-pointer"
-              data-aos="zoom-in"
-              data-aos-delay="300"
-            >
-              <img src="./assets/icons/branding.svg" alt="" class="w-16 h-16" />
-              <h3 class="text-heading-3 font-semibold mt-12">Branding</h3>
-              <p class="font-roboto mt-4 text-sm xl:text-base xl:font-medium">
-                Eveniet alias autem repellendus itaque facere hic vitae optio
-                similique beatae ipsa! Pariatur alias eos veritatis adipisci
-                voluptas nostrum ipsa.
-              </p>
+            <div class="h-full" data-aos="zoom-in" data-aos-delay="300">
+              <div
+                class="p-8 md:p-12 xl:p-16 !border-x md:border-x-0 border-[#FFFFFF33] border-b md:border-b-0 hover:bg-secondary transition h-full"
+              
+              >
+                <img src="./assets/icons/branding.svg" alt="" class="w-16 h-16" />
+                <h3 class="text-heading-3 font-semibold mt-4 xl:mt-12">Branding</h3>
+                <p class="font-roboto mt-2 xl:mt-4 text-sm xl:text-base xl:font-medium">
+                  Craft a unique brand identity with compelling visuals, strategic design, and impactful messaging to stand out in the market.
+              </div>
             </div>
-            <div
-              class="p-8 md:p-12 xl:p-16 !border-x md:!border-l-0 border-[#FFFFFF33] hover:bg-secondary transition cursor-pointer"
-              data-aos="zoom-in"
-              data-aos-delay="400"
-            >
-              <img
-                src="./assets/icons/content-writing.svg"
-                alt=""
-                class="w-16 h-16"
-              />
-              <h3 class="text-heading-3 font-semibold mt-12">
-                Content Writing
-              </h3>
-              <p class="font-roboto mt-4 text-sm xl:text-base xl:font-medium">
-                Eveniet alias autem repellendus itaque facere hic vitae optio
-                similique beatae ipsa! Pariatur alias eos veritatis adipisci
-                voluptas nostrum ipsa.
-              </p>
+            <div class="h-full" data-aos="zoom-in" data-aos-delay="400">
+              <div
+                class="p-8 md:p-12 xl:p-16 !border-x md:!border-l-0 border-[#FFFFFF33] hover:bg-secondary transition h-full"
+              >
+                <img
+                  src="./assets/icons/content-writing.svg"
+                  alt=""
+                  class="w-16 h-16"
+                />
+                <h3 class="text-heading-3 font-semibold mt-4 xl:mt-12">
+                  Content Writing
+                </h3>
+                <p class="font-roboto mt-2 xl:mt-4 text-sm xl:text-base xl:font-medium">
+                  Engaging, high-quality content that resonates with your audience—blog posts, web copy, and marketing materials tailored for maximum impact."
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -321,8 +317,8 @@
           Projects
         </h2>
 
-        <div class="flex mt-[3.75rem] flex-col gap-[3.75rem] xl:gap-[7.5rem]">
-          <div class="w-full" data-aos="zoom-in">
+        <div class="flex mt-4 xl:mt-[3.75rem] flex-col gap-6 md:gap-[3.75rem] xl:gap-[7.5rem]">
+          <a href="#" class="w-full" data-aos="zoom-in">
             <div class="relative rounded-[1.5625rem] cursor-pointer group">
               <img
                 src="./assets/images/projects/cicu-web-design.jpg"
@@ -351,9 +347,9 @@
             >
               Web Design
             </h6>
-          </div>
+          </a>
 
-          <div class="w-full" data-aos="zoom-in">
+          <a href="#" class="w-full" data-aos="zoom-in">
             <div class="relative rounded-[1.5625rem] cursor-pointer group">
               <img
                 src="./assets/images/projects/marketer-web-design.jpg"
@@ -382,9 +378,9 @@
             >
               Web Design
             </h6>
-          </div>
+          </a>
 
-          <div class="w-full" data-aos="zoom-in">
+          <a href="#" class="w-full" data-aos="zoom-in">
             <div class="relative rounded-[1.5625rem] cursor-pointer group">
               <img
                 src="./assets/images/projects/news-web-design.jpg"
@@ -413,10 +409,10 @@
             >
               Web Design
             </h6>
-          </div>
+          </a>
         </div>
 
-        <div class="mt-10 xl:mt-[6.25rem] flex justify-center">
+        <div class="mt-4 xl:mt-[6.25rem] flex justify-center">
           <a href="#" class="button flex w-fit gap-3"
             >View All <img src="./assets/icons/arrow.svg" alt="arrow"
           /></a>
@@ -452,7 +448,7 @@
         <!-- Article Item -->
 
         <div
-          class="p-6 xl:p-12 relative w-fit h-[28.125rem] xl:h-[34.6875rem] border-t xl:border-t-0 xl:border-b-0 border-white-20 mx-auto border-x xl:border-x-0"
+          class="p-6 xl:p-12 relative w-fit h-96 md:h-[28.125rem] xl:h-[34.6875rem] border-t xl:border-t-0 xl:border-b-0 border-white-20 mx-auto border-x xl:border-x-0"
         >
           <img src="./assets/images/articles/mesh-gradient.jpg" alt="" />
           <h3
@@ -463,7 +459,7 @@
           <div
             class="absolute bottom-6 xl:bottom-12 w-full left-0 px-6 xl:px-12"
           >
-            <div class="bg-grey h-px w-full my-5"></div>
+            <div class="bg-grey h-px w-full my-3 xl:my-5"></div>
             <div class="flex justify-between">
               <a
                 class="font-clash-display underline hover:no-underline font-medium xl:font-semibold text-base xl:text-heading-5"
@@ -479,7 +475,7 @@
         <!-- Article Item -->
 
         <div
-          class="p-6 xl:p-12 relative w-fit h-[28.125rem] xl:h-[34.6875rem] xl:border-y-0 xl:border-b-0 mx-auto border-x xl:border-x-0"
+          class="p-6 xl:p-12 relative w-fit h-96 md:h-[28.125rem] xl:h-[34.6875rem] xl:border-y-0 xl:border-b-0 mx-auto border-x xl:border-x-0"
         >
           <img src="./assets/images/articles/google-fonts.jpg" alt="" />
           <h3
@@ -490,7 +486,7 @@
           <div
             class="absolute bottom-6 xl:bottom-12 w-full left-0 px-6 xl:px-12"
           >
-            <div class="bg-grey h-px w-full my-5"></div>
+            <div class="bg-grey h-px w-full my-3 xl:my-5"></div>
             <div class="flex justify-between">
               <a
                 class="font-clash-display underline hover:no-underline font-medium xl:font-semibold text-base xl:text-heading-5"
@@ -520,7 +516,7 @@
           >
             Let’s Discuss Your Project
           </h1>
-          <div class="flex md:w-1/2 mx-auto lg:w-11/12 xl:w-full">
+          <div class="flex md:w-2/3 mx-auto lg:w-11/12 xl:w-full">
             <aside class="w-full lg:w-7/12">
               <h1
                 class="text-heading-3 xl:text-xl font-semibold hidden xl:block"
@@ -528,18 +524,19 @@
                 Let’s Discuss Your Project
               </h1>
               <p class="mt-[1.875rem] text-sm xl:text-heading-4">
-                Lorem ipsum dolor sit amet consectetur adipiscing elit ut sed
-                mauris ut id aliquet augue.
+                Ready to bring your vision to life? Let's talk about your project and create something amazing together. Contact us now!
               </p>
             </aside>
 
             <aside class="flex justify-end items-end lg:w-5/12">
-              <img
-                src="./assets/images/contact-button.svg"
-                class="cursor-pointer hover:brightness-90 duration-700"
-                data-aos="zoom-in"
-                alt="contact-button"
-              />
+              <a href="#">
+                <img
+                  src="./assets/images/contact-button.svg"
+                  class="cursor-pointer hover:brightness-90 duration-700"
+                  data-aos="zoom-in"
+                  alt="contact-button"
+                />
+              </a>
             </aside>
           </div>
         </div>
@@ -562,22 +559,44 @@
         <aside
           class="flex gap-3 xl:gap-6 justify-center xl:justify-normal items-center"
         >
-          <a href="https://www.linkedin.com/"
-            ><img src="./assets/icons/052-linkedin.svg" alt=""
-          /></a>
-          <a href="https://www.messenger.com/"
-            ><img src="./assets/icons/025-messenger.svg" alt=""
-          /></a>
-          <a href="https://www.twitter.com/"
-            ><img src="./assets/icons/096-twitter.svg" alt=""
-          /></a>
-          <a href="https://www.twoo.com/">
-            <img src="./assets/icons/097-twoo.svg" alt="" />
-          </a>
+          <div class="flex flex-row mt-2 divide-x">
+            <a
+              class="py-1 xl:py-0 text-heading-4 px-3 flex gap-2 xl:pl-0 items-center"
+              href="https://twitter.com/RadditoLLC"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <i class="fab fa-twitter-square"></i>
+            </a>
+            <a
+              class="py-1 xl:py-0 text-heading-4 px-3 flex gap-2 items-center"
+              href="https://www.facebook.com/RadditoLLC"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <i class="fab fa-facebook-square"></i>
+            </a>
+            <a
+              class="py-1 xl:py-0 text-heading-4 px-3 flex gap-2 items-center"
+              href="https://www.instagram.com/radditollc"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <i class="fab fa-instagram-square"></i>
+            </a>
+            <a
+              class="py-1 xl:py-0 text-heading-4 px-3 flex gap-2 items-center"
+              href="https://www.linkedin.com/company/radditollc/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <i class="fab fa-linkedin"></i>
+            </a>
+          </div>
         </aside>
       </div>
 
-      <div class="text-center mb-3 page-container">
+      <div class="text-center mb-3 xl:mb-6 page-container">
         Development Copyright &copy;<a
           class="underline hover:no-underline"
           href="https://raddito.com/"
@@ -593,9 +612,16 @@
 
     <script src="https://unpkg.com/@studio-freight/lenis@1.0.35/dist/lenis.min.js"></script> 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
+    <script
+      src="https://kit.fontawesome.com/b50fc748ca.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./main.js"></script>
     <script>
-      AOS.init();
+      AOS.init({
+        once: true,
+        duration: 1000
+      });
     </script>
 
     <script>
@@ -627,7 +653,7 @@
           !countingStarted
         ) {
           // alert("in viewport");
-          console.log("in viewport");
+          // console.log("in viewport");
           countingStarted = true;
           startCounting("project-count", 250, 10);
           startCounting("clients-count", 150, 10);

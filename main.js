@@ -1,105 +1,64 @@
-const { default: Lenis } = require("@studio-freight/lenis");
 
-function isElementInViewport(element) {
-  const rect = element.getBoundingClientRect();
-  return rect.top;
-}
+const navbar = document.getElementById("navbar");
+console.log(navbar);
+// const navContent = document.getElementById("nav-content");
+navbar.style.position = "fixed";
+navbar.style.top = 0;
 
-// Add a flag to track whether counting has started
-let countingStarted = false;
+function createScrollDirectionTracker() {
+  let scrollDirection = "up";
+  let lastScrollY = 0;
 
-const handleCounter = () => {
-  const targetElement = document.querySelector("#stat-container");
+  function handleScroll() {
+    const currentScrollY = Lenis.scroll || window.pageYOffset; // Using Lenis scroll
 
-  if (
-    isElementInViewport(targetElement) <= window.innerHeight &&
-    !countingStarted
-  ) {
-    countingStarted = true;
-    startCounting("project-count", 250, 10);
-    startCounting("clients-count", 150, 10);
-    startCounting("experience-count", 10, 100);
-  } else if (!isElementInViewport(targetElement)) {
-    // Reset the flag when the element goes out of the viewport
-    countingStarted = false;
-    console.log("Element is not in the viewport.");
-    // Do something when the element is not in the viewport
-  }
-};
-
-if (window.innerWidth >= 768) {
-  window.addEventListener("scroll", handleCounter);
-} else {
-  handleCounter();
-}
-
-document.addEventListener("DOMContentLoaded", function () {
-  var scrollButton = document.getElementById("cta-button");
-
-  scrollButton.addEventListener("click", function (e) {
-    // Scroll down by 100vh
-    window.scrollBy({
-      top: window.innerHeight,
-      behavior: "smooth",
-    });
-  });
-
-  // Check scroll position to hide button at the bottom
-  window.addEventListener("scroll", function () {
-    var scrollPosition = window.scrollY || window.pageYOffset;
-    var viewportHeight = window.innerHeight;
-
-    if (scrollPosition > document.body.scrollHeight - viewportHeight - 100) {
-      scrollButton.classList.add("opacity-0");
+    if (currentScrollY > lastScrollY) {
+      scrollDirection = "down";
     } else {
-      scrollButton.classList.remove("opacity-0");
+      scrollDirection = "up";
     }
-  });
-});
 
-function startCounting(id, count, time) {
-  let counterValue = 0;
-  let intervalId;
+    lastScrollY = currentScrollY;
+    // console.log(navbar.children);
+    // console.log(scrollDirection);
+    // Hide navbar on scroll down
+    if (scrollDirection === "down") {
+      navbar.style.top = "-10rem";
+      navbar.style.transition = "all 0.5s ease";
+    } else {
+      if (currentScrollY > 0) {
+        navbar.style.top = "0";
+        navbar.style.boxShadow = "0 0 20px 0 #2B245D21";
+        navbar.children[0].style.backgroundColor = '#0B0A1F'
+        navbar.style.backgroundColor = '#0B0A1F'
+      } else {
+        navbar.style.top = `${0}px`;
+        navbar.style.boxShadow = "none";
+        navbar.style.transition = "all 0.5s ease";
+        navbar.children[0].style.backgroundColor = '#0B0A1F00'
+        navbar.style.backgroundColor = '#0B0A1F00'
 
-  function updateCounter() {
-    const counterElement = document.getElementById(id);
-    if (counterElement) {
-      counterElement.textContent = counterValue;
+      }
+    }
+
+    // Box shadow and fixed position on scroll
+    if (currentScrollY > 0) {
+      // navContent.style.boxShadow = "0 0 20px 0 #2B245D21";
+      // navContent.style.position = "fixed";
+    } else {
+      // navContent.style.boxShadow = "none";
     }
   }
 
-  intervalId = setInterval(() => {
-    counterValue++;
-    updateCounter();
+  // Listen to scroll events
+  window.addEventListener("scroll", handleScroll);
 
-    if (counterValue === count) {
-      clearInterval(intervalId);
-    }
-  }, time);
+  return {
+    getScrollDirection: () => scrollDirection,
+    cleanup: () => {
+      window.removeEventListener("scroll", handleScroll);
+    },
+  };
 }
 
-function addVideoIframe() {
-  var videoContainer = document.getElementById("video-container");
-  var videoIframe = document.getElementById("video");
-  videoIframe.src =
-    "https://www.youtube.com/embed/J4czeOgB-bc?si=27BzpP3l_JXJIqYY";
-  videoContainer.style.display = "flex"; // Show the video container
-}
-
-function removeVideoIframe() {
-  var videoContainer = document.getElementById("video-container");
-  videoContainer.style.display = "none"; // Hide the video container
-}
-
-const lenis = new Lenis();
-
-lenis.on("scroll", (e) => {
-  // console.log(e)
-});
-
-function raf(time) {
-  lenis.raf(time);
-  requestAnimationFrame(raf);
-}
-
-requestAnimationFrame(raf);
+createScrollDirectionTracker();
