@@ -28,7 +28,7 @@ Through carefully curated content, the website shares insights and latest trends
 
 1. Designed By [Kartik Bansal](<https://www.figma.com/file/5Qocnzgr3m9770W0Z1nPHy/Landing-Page-UI-Kit-(Community)?type=design&node-id=502-3740&mode=design&t=rHBVMBP5Pylr9JU0-0>)
 
-2. Developed By [Raddito](https://raddito.com/)
+2. Developed By [Md. Shakib Mia](https://md-shakib-mia.web.app/)
 
 # Available Scripts
 
