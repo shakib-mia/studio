@@ -62,3 +62,31 @@ function createScrollDirectionTracker() {
 }
 
 createScrollDirectionTracker();
+
+
+// Apply language and UI state
+function applyLanguage(lang) {
+  document.documentElement.lang = lang;
+
+  // Move ball
+  const toggleBall = document.getElementById("toggleBall");
+  toggleBall.style.transform = lang === "en" ? "translateX(0)" : "translateX(48px)";
+}
+
+// Handle toggle click
+function toggleLanguage() {
+  const currentLang = document.documentElement.lang;
+  const newLang = currentLang === "en" ? "bn" : "en";
+
+  localStorage.setItem("language", newLang);
+  applyLanguage(newLang);
+}
+
+// On load: get saved lang
+window.addEventListener("DOMContentLoaded", () => {
+  const savedLang = localStorage.getItem("language") || "en";
+  applyLanguage(savedLang);
+});
+
+// Add toggle click listener
+document.getElementById("toggleButton").addEventListener("click", toggleLanguage);

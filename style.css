@@ -53,7 +53,7 @@ h6 {
 }
 
 #navbar {
-  @apply h-0 xl:flex xl:h-auto;
+  @apply h-0 xl:h-auto;
 }
 
 #nav-check:checked + #navbar {
